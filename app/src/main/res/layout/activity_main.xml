@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grassbg"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/heroStatsLayout"
+        android:layout_width="316dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/monsStatsLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/heroPic"
+                android:layout_width="83dp"
+                android:layout_height="match_parent"
+                android:background="@color/battle_blue"
+                android:contentDescription="@string/desc"
+                android:cropToPadding="true"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pikachuicon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ProgressBar
+                android:id="@+id/heroHpBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="178dp"
+                android:layout_height="19dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/custom_hp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/heroPic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <ProgressBar
+                android:id="@+id/heroMpBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="178dp"
+                android:layout_height="19dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/custom_mp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/heroHpBar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/heroHpBar"
+                app:layout_constraintTop_toBottomOf="@+id/heroHpBar"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/heroHp"
+                android:layout_width="48dp"
+                android:layout_height="19dp"
+                android:background="@color/battle_blue"
+                android:textColor="@color/text"
+                app:layout_constraintBottom_toBottomOf="@+id/heroHpBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/heroHpBar"
+                app:layout_constraintTop_toTopOf="@+id/heroHpBar" />
+
+            <TextView
+                android:id="@+id/heroMp"
+                android:layout_width="48dp"
+                android:layout_height="19dp"
+                android:background="@color/battle_blue"
+                android:textColor="@color/text"
+                app:layout_constraintBottom_toBottomOf="@+id/heroMpBar"
+                app:layout_constraintEnd_toEndOf="@+id/heroHp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/heroHp"
+                app:layout_constraintTop_toBottomOf="@+id/heroHp" />
+
+            <TextView
+                android:id="@+id/heroName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pokemongb"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/heroPic"
+                app:layout_constraintTop_toBottomOf="@+id/heroMpBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/monsStatsLayout"
+        android:layout_width="316dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heroStatsLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/monsPic"
+                android:layout_width="83dp"
+                android:layout_height="match_parent"
+                android:background="@color/bright_orange"
+                android:contentDescription="@string/desc"
+                android:cropToPadding="true"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dittoicon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <ProgressBar
+                android:id="@+id/monsHpBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="178dp"
+                android:layout_height="19dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/custom_hp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monsPic"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <ProgressBar
+                android:id="@+id/monsMpBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="178dp"
+                android:layout_height="19dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/custom_mp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/monsHpBar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/monsHpBar"
+                app:layout_constraintTop_toBottomOf="@+id/monsHpBar"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/monsHp"
+                android:layout_width="48dp"
+                android:layout_height="19dp"
+                android:background="@color/bright_orange"
+                android:gravity="end"
+                android:textColor="@color/text"
+                app:layout_constraintBottom_toBottomOf="@+id/monsHpBar"
+                app:layout_constraintEnd_toStartOf="@+id/monsHpBar"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/monsHpBar" />
+
+            <TextView
+                android:id="@+id/monsMp"
+                android:layout_width="48dp"
+                android:layout_height="19dp"
+                android:background="@color/bright_orange"
+                android:gravity="end"
+                android:textColor="@color/text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/monsHp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/monsHp"
+                app:layout_constraintTop_toBottomOf="@+id/monsHp"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/monsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pokemongb"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monsPic"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monsMpBar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/winIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pokemongb"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintEnd_toStartOf="@+id/monsStatsLayout"
+        app:layout_constraintStart_toEndOf="@+id/heroStatsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/heroStatsLayout"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/pikachuGif"
+        android:layout_width="169dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="176dp"
+        android:src="@drawable/pikachucosplay"
+        app:layout_constraintBottom_toBottomOf="@+id/menu"
+        app:layout_constraintEnd_toEndOf="@+id/heroStatsLayout"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="@+id/heroStatsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/heroStatsLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/dittoGif"
+        android:layout_width="87dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/dittosplash"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintEnd_toEndOf="@+id/monsStatsLayout"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/monsStatsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/monsStatsLayout"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <Button
+        android:id="@+id/viewInfoPokemon"
+        style="@style/ButtonStylePokeDex"
+        android:layout_width="118dp"
+        android:layout_height="59dp"
+        android:text="@string/pokedex"
+        app:layout_constraintBottom_toTopOf="@+id/pikachuGif"
+        app:layout_constraintEnd_toEndOf="@+id/heroStatsLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/heroStatsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/heroStatsLayout"
+        app:layout_constraintVertical_bias="0.587" />
+
+    <FrameLayout
+        android:id="@+id/infoTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="info"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:background="@color/pastel"
+            android:fontFamily="@font/pokemongb"
+            android:lineSpacingExtra="4dp"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:text="@string/infoText"
+            android:textColor="#5D4037"
+            android:textSize="13sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/info"
+        style="@style/ButtonStylePokeDex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="info"
+        android:text="@string/info"
+        app:layout_constraintBottom_toTopOf="@+id/dittoGif"
+        app:layout_constraintEnd_toEndOf="@+id/monsStatsLayout"
+        app:layout_constraintStart_toStartOf="@+id/heroStatsLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <FrameLayout
+        android:id="@+id/menu"
+        android:layout_width="400dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="16dp"
+        android:padding="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/menuBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="next">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="400dp"
+                android:layout_height="99dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444"
+                app:srcCompat="@drawable/battlelog" />
+
+            <Button
+                android:id="@+id/basicAttack"
+                style="@style/CustomButtonStyleNormal"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="@string/quick_attack"
+                android:textColor="#4E342E"
+                app:layout_constraintBottom_toTopOf="@+id/chargedAttack"
+                app:layout_constraintEnd_toStartOf="@+id/fullSlash"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/fullSlash"
+                style="@style/CustomButtonStyleSteel"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="@string/iron_tail"
+                android:textColor="#4E342E"
+                app:layout_constraintBottom_toTopOf="@+id/stun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/basicAttack"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/chargedAttack"
+                style="@style/CustomButtonStyleElectric"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="@string/electro_ball"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/stun"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/basicAttack"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/stun"
+                style="@style/CustomButtonStyleElectric"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="@string/thunderbolt"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/chargedAttack"
+                app:layout_constraintTop_toBottomOf="@+id/fullSlash"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/menuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pokemongb"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

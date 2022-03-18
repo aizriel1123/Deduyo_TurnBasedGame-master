@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Deduyo_TurnBasedGame" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomButtonStyleSteel" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">#AAAABB</item>
+        <item name="android:textSize">7sp</item>
+        <item name="fontFamily">@font/pokemongb</item>
+    </style>
+
+    <style name="CustomButtonStyleElectric" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">#FFCC33</item>
+        <item name="android:textSize">7sp</item>
+        <item name="fontFamily">@font/pokemongb</item>
+    </style>
+
+    <style name="CustomButtonStyleNormal" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">#AAAA99</item>
+        <item name="android:textSize">7sp</item>
+        <item name="fontFamily">@font/pokemongb</item>
+    </style>
+
+
+    <style name="ButtonStylePokeDex" parent="Widget.AppCompat.Button.Small">
+        <item name="backgroundTint">#8B0000</item>
+        <item name="android:textSize">7sp</item>
+        <item name="fontFamily">@font/pokemongb</item>
+    </style>
+
+
+</resources>

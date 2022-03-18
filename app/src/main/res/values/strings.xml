@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">deduyo_turnbasedgame</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="desc">no more yellow</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info">moves</string>
+    <string name="infoText">
+        <br />\n
+        Quick Attack = Always strikes first. If both Pokemon use this, the one with higher Speed attacks first. Plus 25 PP. <br />\n
+        Iron Tail =	The foe is slammed with a steel-hard tail. <br />\n
+        Electro Ball = The user hurls an electric orb at the target. <br />\n
+        Thunderbolt = A strong electrical attack that may also leave the foe paralyzed. <br />\n
+        <br />\n
+        With Ditto\'s only move is Transform, both pokemon will have the same moves afterwards! <br />\n
+    </string>
+    <string name="testes">hi \n  hi \n  hi \n </string>
+    <string name="thunderbolt">thunderbolt</string>
+    <string name="electro_ball">electro ball</string>
+    <string name="quick_attack">quick attack</string>
+    <string name="iron_tail">iron tail</string>
+    <string name="pauseText">PAUSE</string>
+    <string name="pokedex">pokedex</string>
+
+</resources>
